@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import gsap from 'gsap';
+import './style.css';
 
 // 1. Configuração Básica (Cena, Câmera e Renderizador)
 const scene = new THREE.Scene();
