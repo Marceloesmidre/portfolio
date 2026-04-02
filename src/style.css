@@ -12,23 +12,55 @@ body {
 
 canvas {
   display: block;
-  /* Posiciona o 3D atrás de tudo */
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 1; /* Fica atrás de tudo */
 }
 
+/* Estilos do Contato no Topo */
+#contact-container {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  text-align: right;
+  pointer-events: auto;
+}
+
+.contact-details h2 {
+  font-size: 1.4rem;
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+
+.contact-details p {
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+.profile-pic img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #3b82f6;
+}
+
+/* Estilos dos Textos do Projeto (Canto Inferior) */
 #ui-container {
-  /* Posiciona o texto na frente do 3D */
   position: absolute;
   bottom: 10%;
   left: 5%;
   z-index: 2;
   color: white;
   max-width: 500px;
-  pointer-events: none; /* Deixa o scroll passar direto para o 3D */
-  transition: opacity 0.3s ease; /* Efeito suave ao trocar de texto */
+  pointer-events: none; /* Deixa o scroll do mouse passar pelo texto para rodar o 3D */
+  transition: opacity 0.3s ease;
 }
 
 #project-title {
@@ -59,7 +91,7 @@ canvas {
   border: 1px solid #fff;
   padding: 10px 20px;
   border-radius: 5px;
-  pointer-events: auto; /* Permite clicar no botão */
+  pointer-events: auto; /* Permite clicar no botão mesmo com o container ignorando o mouse */
   transition: background 0.3s, color 0.3s;
 }
 
