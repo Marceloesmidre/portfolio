@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  overflow: hidden;
+  background-color: #050505;
+}
+
+canvas {
+  display: block;
+  /* Posiciona o 3D atrás de tudo */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#ui-container {
+  /* Posiciona o texto na frente do 3D */
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  z-index: 2;
+  color: white;
+  max-width: 500px;
+  pointer-events: none; /* Deixa o scroll passar direto para o 3D */
+  transition: opacity 0.3s ease; /* Efeito suave ao trocar de texto */
+}
+
+#project-title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+#project-desc {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #cccccc;
+  margin-bottom: 15px;
+}
+
+#project-stack {
+  display: inline-block;
+  background-color: #333333;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+#project-link {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  pointer-events: auto; /* Permite clicar no botão */
+  transition: background 0.3s, color 0.3s;
+}
+
+#project-link:hover {
+  background: white;
+  color: black;
+}
